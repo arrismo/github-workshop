@@ -1,0 +1,16 @@
+---
+title: "Untitled"
+author: "Arris Moise"
+date: "4/1/2022"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+
+avocado <- avocado %>%
+  filter(region == "Albany")
+ggplot(avocado, aes(type, AveragePrice, fill=type )) + geom_boxplot()
+```
+
