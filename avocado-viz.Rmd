@@ -11,6 +11,7 @@ library(tidyverse)
 
 avocado <- avocado %>%
   filter(region == "Albany")
+
 ggplot(avocado, aes(type, AveragePrice, fill=type )) + geom_boxplot()
 ```
 
