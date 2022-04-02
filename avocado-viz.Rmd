@@ -14,3 +14,10 @@ avocado <- avocado %>%
 ggplot(avocado, aes(type, AveragePrice, fill=type )) + geom_boxplot()
 ```
 
+
+```{r}
+avocado <- avocado %>%
+  filter(region == "Albany")
+ggplot(avocado, aes(AveragePrice, colour = type)) + geom_bar()  + facet_wrap(~ type)
+```
+
